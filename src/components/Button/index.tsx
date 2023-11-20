@@ -10,8 +10,4 @@ function Button({ className, children, onClick, type }: ButtonComponentType) {
   );
 }
 
-Button.defaultProps = {
-  type: 'button',
-};
-
 export default Button;
