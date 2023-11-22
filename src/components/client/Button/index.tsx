@@ -1,3 +1,5 @@
+'use client';
+
 import { ButtonComponentType } from '@/interface/button.interface';
 import React from 'react';
 

@@ -1,4 +1,4 @@
 export interface MenuComponentType {
-  viewControl: boolean;
+  view: boolean;
   menuRef: React.RefObject<HTMLDivElement>;
 }
