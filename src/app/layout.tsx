@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import ReduxProvider from '@/Provider/ReduxProvider';
 import Header from './ui/header';
 import fontObject from './ui/fonts/fonts';
 
@@ -18,8 +19,10 @@ export default function RootLayout({
   return (
     <html lang="kr">
       <body className={`${inter.className} antialiased`}>
-        <Header />
-        <main>{children}</main>
+        <ReduxProvider>
+          <Header />
+          <main>{children}</main>
+        </ReduxProvider>
       </body>
     </html>
   );
