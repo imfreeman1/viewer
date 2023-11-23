@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useAppDispatch } from '@/app/hooks/reduxHooks';
-import { addImg } from '@/redux/gallery/action';
+import { addImg, deleteImg } from '@/redux/gallery/action';
 import Button from '../Button';
 
 function Menuitem({ menu }) {
@@ -10,6 +10,7 @@ function Menuitem({ menu }) {
 
   const menuHandler = () => {
     if (menu === '사진 추가') dispatch(addImg());
+    if (menu === '사진 삭제') dispatch(deleteImg());
   };
 
   return (

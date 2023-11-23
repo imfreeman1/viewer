@@ -20,7 +20,10 @@ const gallerySlice = createSlice({
       const newImg = `img${state.length + 1}`;
       return [...state, newImg];
     },
-    deleteImg: () => {},
+    deleteImg: (state) => {
+      state.pop();
+      return state;
+    },
   },
 });
 
