@@ -2,7 +2,7 @@
 
 import { MenuComponentType } from '@/interface/menu.interface';
 import React from 'react';
-import Button from '../Button';
+import Menuitem from '../Menuitem';
 
 const testArr = ['사진 추가', '사진 삭제', '메뉴 3'];
 
@@ -20,7 +20,7 @@ function BuggerMenu({ view, menuRef }: MenuComponentType) {
         {testArr.map((menu) => {
           return (
             <li key={menu}>
-              <Button>{menu}</Button>
+              <Menuitem menu={menu} />
             </li>
           );
         })}
