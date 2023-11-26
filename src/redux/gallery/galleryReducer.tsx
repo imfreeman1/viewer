@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const divArrMaker = (num: number) => {
   const result: string[] = [];
   for (let i = 1; i <= num; i += 1) {
-    const tmp = `img${i}`;
+    const tmp = 'https://picsum.photos/80';
 
     result.push(tmp);
   }
@@ -17,7 +17,7 @@ const gallerySlice = createSlice({
   initialState: testArr,
   reducers: {
     addImg: (state) => {
-      const newImg = `img${state.length + 1}`;
+      const newImg = 'https://picsum.photos/80';
       return [...state, newImg];
     },
     deleteImg: (state) => {
