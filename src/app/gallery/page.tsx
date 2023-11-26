@@ -9,7 +9,7 @@ function Gallery() {
   const imgArr = useAppSelector((state) => state.galleryReducer);
 
   return (
-    <section className="p-6 min-h-full max-h-screen flex justify-center overflow-scroll">
+    <section className="section focus:overflow-y-scroll">
       <div className="w-fit h-auto grid grid-cols-3 grid-flow-row justify-items-center gap-4 sm:grid-cols-4">
         {imgArr.map((img) => {
           return <ImgItem key={uuidv4()} src={img} />;
