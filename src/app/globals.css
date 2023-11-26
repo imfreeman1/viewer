@@ -25,3 +25,6 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+.section {
+@apply p-6 min-h-full max-h-screen flex justify-center
+}
