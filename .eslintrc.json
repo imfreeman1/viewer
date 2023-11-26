@@ -19,7 +19,6 @@
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "plugin:sort-imports-es6-autofix",
     "prettier"
   ],
   "rules": {
@@ -27,14 +26,6 @@
     "react/jsx-props-no-spreading": 0,
     "@typescript-eslint/semi": "off",
     "react/jsx-filename-extension": ["warn", { "extensions": [".ts", ".tsx"] }],
-    "no-useless-catch": "off",
-    "sort-imports-es6-autofix/sort-imports-es6": [
-      2,
-      {
-        "ignoreCase": false,
-        "ignoreMemberSort": false,
-        "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
-      }
-    ]
+    "no-useless-catch": "off"
   }
 }
