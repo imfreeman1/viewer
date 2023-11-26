@@ -12,7 +12,6 @@
     "es6": true
   },
   "ignorePatterns": ["node_modules/", "next.config.js"],
-  "include": [".eslint.js"],
   "extends": [
     "airbnb",
     "airbnb-typescript",
