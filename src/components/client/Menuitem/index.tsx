@@ -5,7 +5,7 @@ import { useAppDispatch } from '@/app/hooks/reduxHooks';
 import { addImg, deleteImg } from '@/redux/gallery/action';
 import Button from '../Button';
 
-function Menuitem({ menu }) {
+function Menuitem({ menu }: { menu: string }) {
   const dispatch = useAppDispatch();
 
   const menuHandler = () => {
