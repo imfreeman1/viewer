@@ -4,7 +4,7 @@ import Input from '@/components/client/Input';
 import { AiOutlinePlus } from 'react-icons/ai';
 
 import Image from 'next/image';
-import React, { ChangeEvent, useState } from 'react';
+import React, { ChangeEvent, useCallback, useState } from 'react';
 import Card from '@/app/ui/card';
 import Button from '@/components/client/Button';
 
@@ -12,7 +12,7 @@ import Button from '@/components/client/Button';
 
 function Add() {
   const [image, setImage] = useState<string | null>(null);
-  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const onChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     const {
       target: { files },
     } = e;
@@ -25,9 +25,7 @@ function Add() {
       setImage(result);
     };
     reader.readAsDataURL(file);
-    // const url = URL.createObjectURL(file);
-    // setImage(url);
-  };
+  }, []);
   return (
     <section className="section flex-col gap-6">
       <Card>
@@ -40,7 +38,6 @@ function Add() {
               <Input
                 className="absolute hover:cursor-copy w-full h-full opacity-0 top-0 left-0"
                 type="file"
-                id="fileInput"
                 onChange={(e) => onChange(e)}
                 accept="image/*"
               />
