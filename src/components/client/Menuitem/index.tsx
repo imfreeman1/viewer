@@ -2,14 +2,11 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 
-function Menuitem({ menu }: { menu: string }) {
-  const pathname = usePathname();
-
+function Menuitem({ menu, address }: { menu: string; address: string }) {
   return (
     <div>
-      <Link href={`${pathname}/${menu}`}>{menu}</Link>
+      <Link href={address}>{menu}</Link>
     </div>
   );
 }
