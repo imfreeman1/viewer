@@ -3,7 +3,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import ImgItem from '@/components/client/ImgItem';
 import React from 'react';
-import { useAppSelector } from '../hooks/reduxHooks';
+import { useAppSelector } from '../../hooks/reduxHooks';
 
 function Gallery() {
   const imgArr = useAppSelector((state) => state.galleryReducer);

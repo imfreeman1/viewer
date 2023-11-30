@@ -1,4 +1,5 @@
 import Navbar from '@/components/client/Navbar';
+import Link from 'next/link';
 import React from 'react';
 
 function Header() {
@@ -6,7 +7,10 @@ function Header() {
     <header>
       <div className="sticky flex justify-between px-4 bg-white text-black h-12 items-center">
         <div>logo</div>
-        <h1>Gallery</h1>
+        <Link href="/gallery">
+          <h1>Gallery</h1>
+        </Link>
+
         <Navbar />
       </div>
     </header>

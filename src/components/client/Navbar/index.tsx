@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
-import useMenuHandler from '@/app/hooks/useMenuHandler';
-import useNavigate from '@/app/hooks/useNavigate';
+import useMenuHandler from '@/hooks/useMenuHandler';
+import useNavigate from '@/hooks/useNavigate';
 import BuggerMenu from '../Menu';
 import Button from '../Button';
 
