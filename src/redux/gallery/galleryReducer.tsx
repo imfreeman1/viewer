@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
 const divArrMaker = (num: number) => {
   const result: string[] = [];
@@ -16,8 +16,9 @@ const gallerySlice = createSlice({
   name: 'gallery',
   initialState: testArr,
   reducers: {
-    addImg: (state) => {
-      const newImg = 'https://picsum.photos/80';
+    addImg: (state, action: PayloadAction<string>) => {
+      const { payload } = action;
+      const newImg = payload;
       return [...state, newImg];
     },
     deleteImg: (state) => {

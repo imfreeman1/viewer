@@ -13,8 +13,8 @@ function BuggerMenu({ view, menuRef }: MenuComponentType) {
   return (
     <div
       ref={menuRef}
-      className={`absolute top-12 right-0 ${
-        view ? null : 'hidden'
+      className={`absolute top-12 right-0 md:hidden ${
+        view ? 'visible z-10' : 'hidden'
       } bg-white h-auto bg-opacity-60 rounded-bl-md`}
     >
       <ul className="flex flex-col last:rounded-bl-md w-20 items-center">
