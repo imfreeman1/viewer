@@ -11,5 +11,6 @@ function Button({ className, children, onClick, type }: ButtonComponentType) {
     </button>
   );
 }
+Button.defaultProps = { type: 'button' };
 
 export default Button;
